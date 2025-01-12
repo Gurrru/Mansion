@@ -1,6 +1,6 @@
 <template>
     <div class="px-5 md:px-20 grid grid-flow-row gap-y-6 md:gap-x-20  md:grid-cols-4 md:!mt-20 py-20 ">
-        <div class="self-start wrapp">
+        <div class="self-center mx-auto lg:self-start">
             <RouterLink to="/">
                 <img src="../assets/images/logo.png" alt="" srcset="">
             </RouterLink>
