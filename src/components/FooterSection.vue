@@ -1,8 +1,8 @@
 <template>
-    <div class="px-5 md:px-20 grid grid-flow-row gap-y-6 md:gap-x-20  md:grid-cols-4 md:!mt-20 py-20 ">
-        <div class="self-center mx-auto lg:self-start">
+    <div class="px-5 md:px-20 grid grid-flow-row gap-y-6 md:gap-x-16  md:grid-cols-4 md:!mt-20 py-20 ">
+        <div class="self-center mx-auto md:self-start">
             <RouterLink to="/">
-                <img src="../assets/images/logo.png" alt="" srcset="">
+                <img src="../assets/images/logo.png" class=" max-w-40 md:w-full" alt="" srcset="">
             </RouterLink>
 
         </div>
@@ -15,21 +15,10 @@
         </FooterItem>
         <FooterItem label="navigation">
             <ul>
-                <li>
-                    <RouterLink to="/">Home</RouterLink>
+                <li v-for="item in Links" :key="item.id">
+                    <RouterLink :to="item.to">{{ item.name }}</RouterLink>
                 </li>
-                <li>
-                    <RouterLink to="/">About us</RouterLink>
 
-                </li>
-                <li>
-                    <RouterLink to="/">Properties</RouterLink>
-
-                </li>
-                <li>
-                    <RouterLink to="/">Contact</RouterLink>
-
-                </li>
             </ul>
 
         </FooterItem>
@@ -59,4 +48,5 @@
 
 <script setup>
 import FooterItem from './FooterItem.vue';
+import { Links } from '@/additional/additional';
 </script>

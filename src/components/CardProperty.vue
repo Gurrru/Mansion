@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-[435px] sm:min-w-[270px] xl:w-full border rounded-xl overflow-hidden">
         <div class="h-[275px]">
-            <img class=" aspect-[17.25/13.875] w-full h-full  object-cover bg-center " src="https://placehold.co/400"
+            <img class="aspect-[17.25/13.875] w-full h-full  object-cover bg-center " src="https://placehold.co/400"
                 alt="" srcset="">
         </div>
         <div class="h-full p-5 bg-white">

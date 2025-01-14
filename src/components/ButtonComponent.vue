@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="py-4 text-lg rounded-full min-w-48 max-w-64" :class="themedButton">
+    <button class="py-4 text-lg rounded-full min-w-48 max-w-64" :class="themedButton">
         {{ label }}
     </button>
 </template>

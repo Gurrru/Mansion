@@ -5,7 +5,8 @@
       <div class="space-y-3 text-center bg-[#F5F1ED] basis-56 px-5 md:px-20 py-3">
         <h1 class="text-4xl lg:text-5xl">Welcome to Mah Dol
         </h1>
-        <p class="text-center lg:text-lg lg:text-start">At Mah Dol, we believe that finding a home or property should be
+        <p class="text-center lg:text-lg lg:text-center">At Mah Dol, we believe that finding a home or property should
+          be
           an exciting and hassle-free experience.
           That’s why we’ve created a platform designed to connect buyers, sellers, and renters with ease and
           transparency.</p>

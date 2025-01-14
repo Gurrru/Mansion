@@ -48,54 +48,44 @@
 
             </div>
 
-            <form
-                class="flex flex-col w-full px-6 py-10 bg-white gap-y-5 rounded-2xl sm:basis-72 sm:max-h-min lg:basis-1/2">
-                <div class="space-y-2 input__group">
-                    <label for="" class="block capitalize ">
-                        Full name
-                    </label>
-                    <input id="" type="text" name=""
-                        class="w-full h-12 px-3 py-2 rounded-lg bg-zinc-100 focus:border-0 focus:ring-0 form-input">
-                </div>
-                <div class="space-y-2 input__group">
-                    <label for="" class="block capitalize ">
-                        email address
-                    </label>
-                    <input id="" type="email" name=""
-                        class="w-full h-12 px-3 py-2 rounded-lg bg-zinc-100 focus:border-0 focus:ring-0 form-input">
-                </div>
-                <div class="space-y-2 input__group">
-                    <label for="" class="block capitalize ">
-                        phone
-                    </label>
-                    <input id="" type="tel" name=""
-                        class="w-full h-12 px-3 py-2 rounded-lg bg-zinc-100 focus:border-0 focus:ring-0 form-input">
-                </div>
-                <div class="space-y-2 input__group">
-                    <label for="" class="block capitalize ">
-                        subject
-                    </label>
-                    <input id="" type="text" name=""
-                        class="w-full h-12 px-3 py-2 rounded-lg bg-zinc-100 focus:border-0 focus:ring-0 form-input">
-                </div>
-                <div class="space-y-2 input__group">
-                    <label for="" class="block capitalize ">
-                        Message
-                    </label>
-
-                    <textarea id="" name=""
-                        class="w-full px-3 py-2 rounded-lg bg-zinc-100 focus:border-0 focus:ring-0 form-textarea"></textarea>
-                </div>
-                <ButtonComponent class="self-center " label="send message" themed="primary" />
+            <form ref="form"
+                class="flex flex-col w-full px-6 py-10 bg-white gap-y-5 rounded-2xl sm:basis-72 sm:max-h-min lg:basis-1/2"
+                @submit.prevent="onSubmit">
+                <base-input v-model="contactForm.fname" type="text" label="Full name" />
+                <base-input v-model="contactForm.email" type="email" label="Email" />
+                <base-input v-model="contactForm.phone" type="tel" label="Phone" />
+                <base-input v-model="contactForm.subject" type="text" label="Subject" />
+                <base-textarea v-model="contactForm.message" label="Message" />
+                <ButtonComponent type="submit" class="self-center " label="send message" themed="primary" />
             </form>
         </div>
-
     </div>
 </template>
 
 <script setup>
 
 import ButtonComponent from '@/components/ButtonComponent.vue';
-</script>
+import BaseInput from '@/components/BaseInput.vue';
+import { reactive, } from 'vue';
+import BaseTextarea from '@/components/BaseTextarea.vue';
 
-<style></style>
+
+
+
+const contactForm = reactive(
+    {
+        fname: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+    }
+)
+
+
+
+function onSubmit() {
+    console.log(contactForm);
+
+}
+</script>
