@@ -22,18 +22,10 @@
                 </div>
 
                 <div class="grid grid-flow-row basis-full sm:grid-cols-2 gap-7 lg:grid-cols-3 xl:grid-cols-4 xl:gap-9">
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
-                    <CardProperty />
+
+                    <CardProperty v-for="item in data" :id="item.id" :key="item.id" :km="item.property.bath"
+                        :kt="item.property.bed" :harga="item.property.price" :name="item.property.name"
+                        :gambar="item.images[0].source" :param="item.property.id" />
                 </div>
 
             </div>
@@ -43,6 +35,15 @@
 
 <script setup>
 import CardProperty from '@/components/CardProperty.vue';
+import { ref } from 'vue';
+
+const data = ref(null)
+
+fetch('http://localhost:5000/properties').then((response) => response.json()).then(result => data.value = result.properties
+
+)
+
+
 </script>
 
 <style></style>

@@ -13,7 +13,7 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/prop-list',
+      path: '/properties',
       name: 'prop-list',
       component: PropListView,
     },
