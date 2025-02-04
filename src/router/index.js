@@ -32,6 +32,7 @@ const router = createRouter({
     },
     {
       path: '/property/:id',
+
       component: PropertyView,
     },
   ],

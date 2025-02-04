@@ -1,5 +1,5 @@
 import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
+import pluginVue, { rules } from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
@@ -20,6 +20,11 @@ export default [
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
+  },
+  {
+    rules: {
+      'linebreak-style': 1,
+    },
   },
   skipFormatting,
 ]

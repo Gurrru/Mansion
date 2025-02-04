@@ -9,7 +9,7 @@
             </div>
             <div class="hidden gap-x-10 sm:flex">
                 <RouterLink class="transition-all" to="/about" @click="closeNavMenu">About Us</RouterLink>
-                <RouterLink class="transition-all" to="/prop-list" @click="closeNavMenu">Properties</RouterLink>
+                <RouterLink class="transition-all" to="/properties" @click="closeNavMenu">Properties</RouterLink>
                 <RouterLink class="transition-all" to="/contact" @click="closeNavMenu">Contact</RouterLink>
 
             </div>
@@ -17,9 +17,6 @@
                 <button type="button" @click="showNavMenu">
                     <HugeiconsMenu01 v-if="!open" />
                     <HugeIconsCancel01 v-else />
-
-
-
                 </button>
 
             </div>

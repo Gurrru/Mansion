@@ -20,13 +20,17 @@
 <script setup>
 import CardProperty from './CardProperty.vue';
 import ButtonComponent from './ButtonComponent.vue';
-import { computed, onMounted, ref } from 'vue';
+import useFetch from '@/composables/fetch';
+import { computed, ref } from 'vue';
+
+const url = ref('properties')
+const { result, error } = useFetch(url)
+
+
+const data = computed(() => result.value ? Object.values(result.value).slice(0, 4) : [])
 
 
 
-const data = ref(null)
-
-fetch('http://localhost:5000/properties').then((response) => response.json()).then(result => data.value = result.properties)
 
 
 
