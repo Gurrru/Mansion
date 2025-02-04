@@ -4,10 +4,10 @@
             <div class="flex flex-col sm:flex-row sm:flex-wrap gap-y-5 sm:gap-5 sm:justify-between">
                 <h1 class="text-5xl text-center capitalize sm:basis-full">iconic for good reason</h1>
                 <div class="flex flex-row justify-between sm:basis-full">
-
                     <base-select v-model="selected" :options="listSelected" value="id" text="name" />
                     <base-select v-model="sorted" :options="listSorted" value="value" text="text" />
                 </div>
+
                 <div v-if="resultProperties"
                     class="grid grid-flow-row basis-full sm:grid-cols-2 gap-7 lg:grid-cols-3 xl:grid-cols-4 xl:gap-9">
                     <CardProperty v-for="item in propertySorted" :id="item.id" :key="item.id" :km="item.property.bath"
@@ -15,8 +15,11 @@
                         :gambar="item.images[0].source" :param="item.property.id" />
                 </div>
 
-                <div v-else class="">
+                <div v-if="!resultProperties" class="">
                     loading
+                </div>
+                <div v-if="resultProperties?.length === 0" class="">
+                    kosong
                 </div>
 
             </div>
@@ -30,7 +33,7 @@ import useFetch from '@/composables/fetch';
 import BaseSelect from '@/components/BaseSelect.vue';
 import { computed, ref, watch, watchEffect, } from 'vue';
 
-const selected = ref(`properties`)
+const selected = ref(`regions`)
 const sorted = ref('low')
 
 const listSorted = [
@@ -45,9 +48,9 @@ const listSorted = [
 ]
 
 const urlLink = computed(() => {
-    let baseUrl = "properties"
-    if (selected.value === "properties") {
-        return baseUrl
+    let baseUrl = "regions"
+    if (selected.value === "regions") {
+        return baseUrl = 'properties'
     }
     return baseUrl + `/${selected.value}`
 })
@@ -60,7 +63,7 @@ const { result: resultRegion, error: errorRegion } = useFetch('regions')
 const listSelected = computed(() => {
     let data = [
         {
-            id: "properties",
+            id: "regions",
             name: "Select all",
         }
     ]
@@ -81,7 +84,6 @@ const propertySorted = computed(() => {
 
     } else {
         return data.sort((a, b) => b.property.price - a.property.price)
-
     }
 
 })
