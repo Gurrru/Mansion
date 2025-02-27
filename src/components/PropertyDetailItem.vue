@@ -15,7 +15,6 @@ defineProps({
         required: true
     },
     label: {
-        type: String,
         required: true
     },
     desc: {

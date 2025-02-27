@@ -10,22 +10,18 @@
                     get in touch
                 </h1>
                 <div class="overflow-hidden rounded-tr-[100px] md:max-w-96">
-                    <img src="../assets/images/person.jpg" class="" alt="" srcset="">
+                    <img :src="imgperson" class="" alt="" srcset="">
                 </div>
                 <p class="text-xs text-center md:text-start md:!mt-3 lg:text-sm">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit soluta, doloribus incidunt
-                    praesentium
-                    porro
-                    ab maxime repellendus? A corrupti, quaerat iusto optio ea obcaecati labore distinctio animi aperiam,
-                    sint
-                    repellat!
+                    Have a question or need assistance? We're here to help! Whether you're looking for your dream
+                    property or just want to chat, feel free to reach out.
                 </p>
                 <div class=" w-1/2 md:w-full  md:ml-4 md:!mt-3">
                     <h2 class="text-2xl capitalize md:text-xs lg:text-sm ">
                         phone
                     </h2>
                     <p class="text-sm md:text-xl">
-                        +62 89656448972
+                        +6275859503847
                     </p>
                 </div>
 
@@ -40,9 +36,9 @@
                 <div class=" w-1/2 md:w-full md:ml-4 info md:!mt-3 ">
                     <h4 class="text-2xl md:text-xs lg:text-sm ">Mah Dol</h4>
                     <p class="w-full text-sm md:text-xl">
-                        ΕΟ Κυπαρισσίας Πύλου
-                        Kiparissia 245 00
-                        Greece
+                        Sendang Kulon, Sleman
+                        Yogyakarta,
+                        Indonesia
                     </p>
                 </div>
 
@@ -66,8 +62,16 @@
 
 import ButtonComponent from '@/components/ButtonComponent.vue';
 import BaseInput from '@/components/BaseInput.vue';
-import { reactive, } from 'vue';
+import { reactive, onMounted } from 'vue';
 import BaseTextarea from '@/components/BaseTextarea.vue';
+import imgperson from "../assets/images/person.jpg"
+import { useHead } from '@unhead/vue';
+useHead({
+    title: `Contact`
+})
+onMounted(() => {
+    window.scrollTo(0, 0)
+})
 
 
 
@@ -85,7 +89,7 @@ const contactForm = reactive(
 
 
 function onSubmit() {
-    console.log(contactForm);
+
 
 }
 </script>

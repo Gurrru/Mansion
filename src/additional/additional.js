@@ -9,7 +9,7 @@ export const Links = [
   },
   {
     name: 'Properties',
-    to: '/prop-list',
+    to: '/properties',
   },
   {
     name: 'Contact',

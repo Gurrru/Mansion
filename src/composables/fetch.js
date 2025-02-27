@@ -7,7 +7,7 @@ export default function useFetch(url) {
     result.value = null
     error.value = null
     const urlValue = toValue(url)
-    fetch(`http://localhost:5000/${urlValue}`)
+    fetch(`https://server-property-listing.vercel.app/${urlValue}`)
       .then((res) => {
         if (res.ok) {
           return res.json()

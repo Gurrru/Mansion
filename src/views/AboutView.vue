@@ -31,15 +31,15 @@
           <h2 class=" text-[1.75rem] capitalize md:text-center">
             What we offer
           </h2>
-          <div class="flex flex-col md:flex-row gap-y-5 md:justify-between md:flex-wrap ">
-            <AboutItem :icon="IconAccountSetting" title="User-Centric Experience"
-              text="Our platform is designed with you in mind, offering intuitive navigation and personalized recommendations." />
-            <AboutItem :icon="IconAccountSetting" title="User-Centric Experience"
-              text="Our platform is designed with you in mind, offering intuitive navigation and personalized recommendations." />
-            <AboutItem :icon="IconAccountSetting" title="User-Centric Experience"
-              text="Our platform is designed with you in mind, offering intuitive navigation and personalized recommendations." />
-            <AboutItem :icon="IconAccountSetting" title="User-Centric Experience"
-              text="Our platform is designed with you in mind, offering intuitive navigation and personalized recommendations." />
+          <div class="flex flex-col md:flex-row gap-y-5 md:justify-between md:flex-wrap">
+            <AboutItem :icon="IconHome" title="Find Your Dream Home Easily"
+              text="Seamless navigation, personalized recommendations, and an effortless way to explore the best properties." />
+            <AboutItem :icon="IconsKey01" title="Your Perfect Home, Just a Click Away"
+              text="We simplify property searching with intelligent filters and an intuitive browsing experience." />
+            <AboutItem :icon="IconLocation" title="Find Homes in the Right Place"
+              text="Discover properties in prime locations with a smooth and efficient search experience." />
+            <AboutItem :icon="IconsBitcoinGraph" title="Smart Insights for Smart Buyers"
+              text="Access market trends and expert recommendations to make the best investment decisions." />
 
           </div>
         </div>
@@ -52,5 +52,17 @@
 
 <script setup>
 import AboutItem from '@/components/AboutItem.vue';
-import IconAccountSetting from '~icons/hugeicons/account-setting-02'
+import IconsBitcoinGraph from '~icons/hugeicons/bitcoin-graph'
+import IconsKey01 from "~icons/hugeicons/key-01"
+import IconLocation from "~icons/hugeicons/location-03"
+import IconHome from "~icons/hugeicons/house-04"
+import { onMounted } from 'vue';
+import { useHead } from '@unhead/vue';
+useHead({
+  title: `About`
+})
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 </script>

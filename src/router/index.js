@@ -5,7 +5,7 @@ import PropListView from '@/views/Prop-ListView.vue'
 import PropertyView from '@/views/PropertyView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -14,8 +14,9 @@ const router = createRouter({
     },
     {
       path: '/properties',
-      name: 'prop-list',
+      name: 'properties',
       component: PropListView,
+      children: [],
     },
     {
       path: '/contact',
@@ -32,8 +33,13 @@ const router = createRouter({
     },
     {
       path: '/property/:id',
-
       component: PropertyView,
+      name: 'property',
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'error',
+      component: () => import('../views/ErrorView.vue'),
     },
   ],
 })

@@ -8,16 +8,21 @@
                     <base-select v-model="sorted" :options="listSorted" value="value" text="text" />
                 </div>
 
-                <div v-if="resultProperties"
-                    class="grid grid-flow-row basis-full sm:grid-cols-2 gap-7 lg:grid-cols-3 xl:grid-cols-4 xl:gap-9">
-                    <CardProperty v-for="item in propertySorted" :id="item.id" :key="item.id" :km="item.property.bath"
-                        :kt="item.property.bed" :harga="item.property.price" :name="item.property.name"
-                        :gambar="item.images[0].source" :param="item.property.id" />
-                </div>
+                <Transition name="fade" mode="out-in">
+                    <div v-if="resultProperties"
+                        class="grid grid-flow-row basis-full sm:grid-cols-2 gap-7 lg:grid-cols-3 xl:grid-cols-4 xl:gap-9">
+                        <CardProperty v-for="item in propertySorted" :id="item.id" :key="item.id"
+                            :km="item.property.bath" :kt="item.property.bed" :harga="item.property.price"
+                            :name="item.property.name" :gambar="item.images[0].source" :param="item.property.id" />
+                    </div>
 
-                <div v-if="!resultProperties" class="">
-                    loading
-                </div>
+                    <div v-else
+                        class="grid grid-flow-row basis-full sm:grid-cols-2 gap-7 lg:grid-cols-3 xl:grid-cols-4 xl:gap-9">
+                        <div v-for="item in 4"
+                            class="w-full h-[435px] sm:min-w-[270px] xl:w-full bg-gray-50 border rounded-xl">
+                        </div>
+                    </div>
+                </Transition>
                 <div v-if="resultProperties?.length === 0" class="">
                     kosong
                 </div>
@@ -31,8 +36,15 @@
 import CardProperty from '@/components/CardProperty.vue';
 import useFetch from '@/composables/fetch';
 import BaseSelect from '@/components/BaseSelect.vue';
-import { computed, ref, watch, watchEffect, } from 'vue';
+import { computed, ref, watch, watchEffect, onMounted } from 'vue';
+import { useHead } from '@unhead/vue';
 
+useHead({
+    title: `List Property`
+})
+onMounted(() => {
+    window.scrollTo(0, 0)
+})
 const selected = ref(`regions`)
 const sorted = ref('low')
 
@@ -90,4 +102,14 @@ const propertySorted = computed(() => {
 
 </script>
 
-<style></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>

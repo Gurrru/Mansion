@@ -1,5 +1,5 @@
 <template>
-    <button class="py-4 text-lg rounded-full min-w-48 max-w-64" :class="themedButton">
+    <button class="py-4 text-lg rounded-full min-w-48 max-w-64" :class="themedButton" v-bind:="$attrs">
         {{ label }}
     </button>
 </template>
@@ -36,13 +36,6 @@ const themedButton = computed(() => {
 
     return themes[props.themed]
 })
-
-
-// const styleClass = [
-//     props.themed === 'primary' ? 'bg-black text-white' : '',
-//     props.themed === 'outline' ? 'border-solid border-2 border-black text-black hover:bg-black hover:text-white' : '',
-// ]
-
 </script>
 
 <style lang="scss" scoped></style>

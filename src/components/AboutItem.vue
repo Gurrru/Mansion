@@ -1,6 +1,6 @@
 <template>
-    <div class=" md:w-64 lg:w-1/2">
-        <div class="grid w-10 h-10 bg-gray-400 rounded-full place-content-center icon">
+    <div class=" md:w-64 lg:basis-2/5">
+        <div class="grid w-10 h-10 bg-gray-100 rounded-full place-content-center icon">
             <component :is="icon" class="text-2xl "></component>
         </div>
         <div class="mb-1 text-xl font-semibold capitalize title" role="heading">

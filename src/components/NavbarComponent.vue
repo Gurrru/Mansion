@@ -8,9 +8,9 @@
 
             </div>
             <div class="hidden gap-x-10 sm:flex">
-                <RouterLink class="transition-all" to="/about" @click="closeNavMenu">About Us</RouterLink>
-                <RouterLink class="transition-all" to="/properties" @click="closeNavMenu">Properties</RouterLink>
-                <RouterLink class="transition-all" to="/contact" @click="closeNavMenu">Contact</RouterLink>
+                <li class=" list-none" v-for="item in Links" :key="item.id">
+                    <RouterLink :to="item.to">{{ item.name }}</RouterLink>
+                </li>
 
             </div>
             <div class="sm:hidden">
@@ -25,10 +25,9 @@
             :class="`${open ? ' opacity-100 scale-100' : ' opacity-0 scale-0'}`">
             <div
                 class="flex flex-col items-center w-full h-full py-20 text-5xl transition-all duration-700 ease-in-out ">
-                <RouterLink class="transition-all" to="/about" @click="closeNavMenu">About Us</RouterLink>
-                <RouterLink class="transition-all" to="/prop-list" @click="closeNavMenu">Properties</RouterLink>
-                <RouterLink class="transition-all" to="/contact" @click="closeNavMenu">Contact</RouterLink>
-
+                <li class=" list-none" v-for="item in Links" :key="item.id">
+                    <RouterLink :to="item.to" @click="closeNavMenu">{{ item.name }}</RouterLink>
+                </li>
             </div>
         </div>
     </div>
@@ -41,7 +40,7 @@
 import { ref, watch } from "vue";
 import HugeiconsMenu01 from "~icons/hugeicons/menu-01"
 import HugeIconsCancel01 from "~icons/hugeicons/cancel-01"
-
+import { Links } from "@/additional/additional";
 
 const open = ref(false);
 

@@ -5,12 +5,10 @@
             <h1 class="text-4xl text-center lg:text-5xl lg:text-start">
                 Yogyakarta homes, apartments, land & more
             </h1>
-            <p class="text-center lg:text-lg lg:text-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Provident
-                inventore,
-                voluptate
-                repellat,
-                tempori</p>
+            <p class="text-center lg:text-lg lg:text-start">Discover Your Dream Property in Yogyakarta
+                From modern apartments to serene countryside homes, find the perfect place to call home in Yogyakarta.
+
+            </p>
             <ButtonComponent label="Start exploring" themed="primary" />
         </div>
 

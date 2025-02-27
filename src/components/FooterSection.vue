@@ -8,10 +8,10 @@
         </div>
 
         <FooterItem label="Location">
-            2700 Glades Circle Suite 101
-            Weston, Florida 33327 <br>
-            +1 954 9990191 <br>
-            United States
+            Sendang Kulon, Sleman <br>
+            Yogyakarta, <br>
+            Indonesia<br>
+            +6275859503847
         </FooterItem>
         <FooterItem label="navigation">
             <ul>
