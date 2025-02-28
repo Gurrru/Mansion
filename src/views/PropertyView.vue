@@ -14,7 +14,9 @@
                 <div class="w-full h-full row-span-3 bg-gray-50 [&:not(:first-child)]:col-span-1 [&:not(:first-child)]:row-span-1"
                     :class="images[0].length > 1 ? ' first:col-span-2' : ' first:col-span-3'" v-for="item in images[0]"
                     v-if="result">
-                    <img :src="item.source" class="object-cover object-bottom w-full h-full" :alt="item.label">
+                    <img :src="item.source" class="w-full h-full"
+                        :class="images[0].length > 1 ? 'object-cover object-center' : ' lg:object-fill'"
+                        :alt="item.label">
                 </div>
                 <div class="w-full h-full col-span-2 bg-gray-50 row-span-3 [&:not(:first-child)]:col-span-1 [&:not(:first-child)]:row-span-1"
                     v-for="item in imgtotal" v-else>
