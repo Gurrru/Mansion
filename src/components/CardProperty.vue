@@ -8,19 +8,19 @@
         <div class="h-full p-5 bg-white">
             <p class="text-lg font-bold capitalize ">{{ name }}</p>
             <div class="flex py-1 text-sm border-t border-b border-gray-200 text-opacity-85 gap-x-3">
-                <p>{{ kt }} Kamar tidur</p>
+                <p>{{ kt }} Bedroom</p>
                 <span>|</span>
-                <p> {{ km }} Kamar mandi</p>
+                <p> {{ km }} Bathroom</p>
             </div>
             <p class="pb-1 border-b border-gray-200 text-opacity-85 ">
-                Rumah
+               House
             </p>
             <div class="flex justify-between w-full mt-4 text-opacity-85">
                 <p class="text-base ">
                     <span class="font-semibold ">{{ toIDR(harga) }}</span>
                 </p>
                 <p class="self-end text-xs ">
-                    9 bulan lalu
+                    9 months ago
                 </p>
             </div>
         </div>
