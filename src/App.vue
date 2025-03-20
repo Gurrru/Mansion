@@ -13,7 +13,7 @@ import { useHead } from '@unhead/vue';
 
 useHead({
   titleTemplate: '%siteName %separator %s',
-  templateParams: { siteName: 'Mah Dol', separator: '|' },
+  templateParams: { siteName: 'Mansion', separator: '|' },
   link: [{
     rel: 'icon',
     "href": "./assets/icons/web-app-manifest-192x192.png",
