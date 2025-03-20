@@ -17,7 +17,7 @@
             </p>
             <div class="flex justify-between w-full mt-4 text-opacity-85">
                 <p class="text-base ">
-                    <span class="font-semibold ">{{ toIDR(harga) }}</span>
+                    <span class="font-semibold ">{{ toPHP(harga) }}</span>
                 </p>
                 <p class="self-end text-xs ">
                     9 months ago
@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { toIDR } from '@/helpers/curency';
+import { toPHP } from '@/helpers/curency';
 import { useRouter } from 'vue-router';
 const router = useRouter()
 

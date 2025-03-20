@@ -3,7 +3,7 @@
         <nav class="absolute z-10 flex items-center justify-between w-full px-5 py-5 md:px-20">
             <div class="nav__logo">
                 <RouterLink class="transition-all" to="/" @click="closeNavMenu">
-                    <img src="../assets/images/logo.png" alt="" srcset="" class=" w-28">
+                    <img src="../assets/images/logo mansion.png" alt="" srcset="" class=" w-28">
                 </RouterLink>
 
             </div>

@@ -2,7 +2,7 @@
     <div class="px-5 md:px-20 grid grid-flow-row gap-y-6 md:gap-x-16  md:grid-cols-4 md:!mt-20 py-20 ">
         <div class="self-center mx-auto md:self-start">
             <RouterLink to="/">
-                <img src="../assets/images/logo.png" class=" max-w-40 md:w-full" alt="" srcset="">
+                <img src="../assets/images/logo mansion.png" class=" max-w-40 md:w-full" alt="" srcset="">
             </RouterLink>
 
         </div>

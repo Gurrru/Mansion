@@ -26,7 +26,7 @@
             <div class="basis-full">
                 <Transition name="fade" mode="out-in">
                     <h3 class="text-2xl font-semibold" v-if="result">
-                        {{ toIDR(property[0]?.price) }}
+                        {{ toPHP(property[0]?.price) }}
                     </h3>
                     <div class="bg-gray-50 h-8 w-[385px] md:w-[514px] lg:w-[864px]" v-else></div>
                 </Transition>
@@ -81,7 +81,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue';
 import { useRoute } from 'vue-router';
 import useFetch from '@/composables/fetch';
 import { computed, onMounted } from 'vue';
-import { toIDR } from '@/helpers/curency';
+import { toPHP } from '@/helpers/curency';
 import { useHead } from '@unhead/vue';
 
 let title = ''

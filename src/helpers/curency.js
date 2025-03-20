@@ -1,6 +1,6 @@
-export function toIDR(money) {
+export function toPHP(money) {
   return new Intl.NumberFormat('en-ID', {
     style: 'currency',
-    currency: 'IDR',
+    currency: 'PHP',
   }).format(money)
 }
