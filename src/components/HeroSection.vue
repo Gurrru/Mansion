@@ -3,10 +3,10 @@
         class="flex flex-col lg:flex-row  py-10 bg-[#F5F1ED]  px-5 pt-20 md:px-20 w-full gap-7 min-w-full min-h-dvh lg:items-center ">
         <div class="flex flex-col items-center lg:basis-2/6 lg:items-start gap-y-6">
             <h1 class="text-4xl text-center lg:text-5xl lg:text-start">
-                Yogyakarta homes, apartments, land & more
+                Olongapo homes, apartments, land & more
             </h1>
-            <p class="text-center lg:text-lg lg:text-start">Discover Your Dream Property in Yogyakarta
-                From modern apartments to serene countryside homes, find the perfect place to call home in Yogyakarta.
+            <p class="text-center lg:text-lg lg:text-start">Discover Your Dream Property in Olongapo
+                From modern apartments to serene countryside homes, find the perfect place to call home in Olongapo.
 
             </p>
             <ButtonComponent label="Start exploring" themed="primary" />

@@ -4,7 +4,7 @@
             Browse by region
         </h3>
         <p class="text-lg sm:text-center">
-            Search property listings by region in Yogyakarta
+            Search property listings by region in Olongapo
         </p>
         <div class="grid w-full grid-cols-2 gap-5 md:grid-cols-5 md:mt-4">
 

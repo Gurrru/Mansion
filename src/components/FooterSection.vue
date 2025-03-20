@@ -8,10 +8,10 @@
         </div>
 
         <FooterItem label="Location">
-            Sendang Kulon, Sleman <br>
-            Yogyakarta, <br>
-            Indonesia<br>
-            +6275859503847
+            Old Cabalan <br>
+            Olongapo City, <br>
+            Philippines<br>
+            +639318598521
         </FooterItem>
         <FooterItem label="navigation">
             <ul>

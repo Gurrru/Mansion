@@ -1,11 +1,11 @@
 <template>
     <section class="flex flex-col items-center w-full px-5 gap-y-4 md:px-20 ">
         <h2 class="text-[28px] text-center">
-            Featured properties in Yogyakarta
+            Featured properties in Olongapo
         </h2>
         <p class="text-lg text-center">
             Handpicked Listings Just for You
-            Explore the best properties in Yogyakarta, carefully selected to match your lifestyle and investment goals.
+            Explore the best properties in Olongapo, carefully selected to match your lifestyle and investment goals.
         </p>
 
 

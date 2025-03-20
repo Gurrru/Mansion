@@ -21,7 +21,7 @@
                         phone
                     </h2>
                     <p class="text-sm md:text-xl">
-                        +6275859503847
+                        +639318598521
                     </p>
                 </div>
 
@@ -30,15 +30,15 @@
                         email
                     </h3>
                     <p class="text-sm md:text-xl">
-                        hi@mahdol.com
+                        mansion@gmail.com
                     </p>
                 </div>
                 <div class=" w-1/2 md:w-full md:ml-4 info md:!mt-3 ">
                     <h4 class="text-2xl md:text-xs lg:text-sm ">Mah Dol</h4>
                     <p class="w-full text-sm md:text-xl">
-                        Sendang Kulon, Sleman
-                        Yogyakarta,
-                        Indonesia
+                        Old Cabalan
+                        Olongapo City,
+                        Philippines
                     </p>
                 </div>
 

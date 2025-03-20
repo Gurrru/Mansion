@@ -3,9 +3,9 @@
 
     <div class="flex flex-col justify-center ">
       <div class="space-y-3 text-center bg-[#F5F1ED] basis-56 px-5 md:px-20 py-3">
-        <h1 class="text-4xl lg:text-5xl">Welcome to Mah Dol
+        <h1 class="text-4xl lg:text-5xl">Welcome to Mansion
         </h1>
-        <p class="text-center lg:text-lg lg:text-center">At Mah Dol, we believe that finding a home or property should
+        <p class="text-center lg:text-lg lg:text-center">At Mansion, we believe that finding a home or property should
           be
           an exciting and hassle-free experience.
           That’s why we’ve created a platform designed to connect buyers, sellers, and renters with ease and
@@ -19,7 +19,7 @@
           </h2>
           <p class="lg:text-lg">
             Our mission is to revolutionize the property market by offering a reliable, user-friendly, and comprehensive
-            platform for property listings. Whether you're looking to buy, sell, or rent, Mah Dol is here to help you
+            platform for property listings. Whether you're looking to buy, sell, or rent, Mansion is here to help you
             make
             informed decisions and find the property that truly fits your needs.
           </p>
